@@ -17,17 +17,19 @@
 (n+1)!&amp;=(n+1)\cdot n!\\
 &amp;&gt;(n+1)\cdot n^2 \ \ \ \ \text{\it by the inductive hypothesis}\\
 &amp;&gt;(n+1)\cdot (n+1)\\
-&amp;=(n+1)^2
+&amp;=(n+1)^2.
 \end{align*}\]</span></p>
 
-<p>The second inequality requires that we prove <span class="math">\(n^2&gt;n+1\)</span> for <span class="math">\(n\geq 4\)</span>:
+<p>The second inequality requires that we prove <span class="math">\(n^2&gt;n+1\)</span> for <span class="math">\(n\geq 4\)</span>. The following inequalities are equivalent:
 <span class="math">\[\begin{align*}
 n^2&amp;&gt;n+1\\
 n^2-n-1&amp;&gt;0\\
-(n-2)(n+1)&amp;&gt;0\\
+(n-2)(n+1)&amp;&gt;0.\\
 \end{align*}\]</span></p>
 
-<p>which is true if <span class="math">\(n&lt;-1\)</span> or <span class="math">\(n&gt;2\)</span>. So, this holds for <span class="math">\(n\geq 4\)</span>.</p>
+<p>The last inequality is true if <span class="math">\(n&lt;-1\)</span> or <span class="math">\(n&gt;2\)</span>. So, <span class="math">\(n^2&gt;n+1\)</span> for <span class="math">\(n\geq 4.\)</span></p>
+
+<p>We have shown that <span class="math">\(n!&gt;n^2\)</span> implies <span class="math">\((n+1)!&gt;(n+1)^2\)</span>, and we have shown the inequality is true for <span class="math">\(n=4\)</span>. By induction, <span class="math">\(n!&gt;n^2\)</span> is true for all integers <span class="math">\(n\geq 4\)</span>.</p>
 <!--
 
 **7.** (quiz or exam)
@@ -44,6 +46,30 @@ $$\begin{align*}
 
 -->
 
+<p><strong>8.</strong></p>
+
+<p>For <span class="math">\(n=1\)</span>: <span class="math">\[2=\frac{2!}{1!}.\]</span></p>
+
+<p>Assume the identity is true for <span class="math">\(n\)</span> and consider:</p>
+
+<p><span class="math">\[\begin{align*}
+2\cdot 6 \cdot 10 \cdots (4n-2)\cdot (4n+2)&amp;=\frac{(2n)!}{n!}\cdot (4n+2)\\&amp;=\frac{(2n)!\cdot 2 \cdot (2n+1)}{n!}\\
+&amp;= \frac{(2n)!\cdot 2 \cdot (2n+1)\cdot (n+1)}{n!\cdot (n+1)}\\
+&amp;= \frac{(2n)! \cdot (2n+1)\cdot (2n+2)}{n!\cdot (n+1)}\\
+&amp;=\frac{(2(n+1))!}{(n+1)!}=\frac{(2n+2)!}{(n+1)!}
+\end{align*}\]</span> which shows the identity is true for <span class="math">\(n+1\)</span>. By induction the identity is true for all integers <span class="math">\(n\geq1\)</span>.</p>
+
+<p>The inequality <span class="math">\[2^n(n!)^2\leq(2n)!\]</span>
+is equivalent to <span class="math">\[2^n(n!) \leq \frac{(2n)!}{n!}\]</span> so from part (a), we need to show that <span class="math">\[2^n(n!) \leq 2\cdot 6 \cdot 10 \cdots (4n-2).\]</span></p>
+
+<p>The right hand side is:
+<span class="math">\[\begin{align*}
+2\cdot 6 \cdot 10 \cdots (4n-2)&amp;=(2\cdot1)\cdot(2\cdot3)\cdot(2\cdot 5)\cdots (2\cdot (2n-1))\\
+&amp;=2^n\cdot (1\cdot 3 \cdot 5 \cdots (2n-1))
+\end{align*}\]</span></p>
+
+<p>Clearly <span class="math">\[n! \leq (1 \cdot 3 \cdot 5 \cdot (2n-1))\]</span> since there are <span class="math">\(n\)</span> factors in both products and all but the first factor are greater in the right hand side. For example, if <span class="math">\(n=4\)</span>: <span class="math">\[1\cdot 2 \cdot 3 \cdot 4 \leq 1 \cdot 3 \cdot 5 \cdot 7.\]</span> Multiply both sides of <span class="math">\[n! \leq (1 \cdot 3 \cdot 5 \cdot (2n-1))\]</span> by <span class="math">\(2^n\)</span> to obtain the desired result.</p>
+
 <p><strong>9.</strong></p>
 
 <p>For <span class="math">\(n=1\)</span>, <span class="math">\(1+a \geq 1+a\)</span>.</p>
@@ -59,5 +85,42 @@ $$\begin{align*}
 \end{align*}\]</span></p>
 
 <p>The first inequality follows from the inductive hypothesis. This first inequality is also where we need to use the assumption that <span class="math">\(1+a &gt;0\)</span>. If <span class="math">\(1+a&lt;0\)</span>, the direction of the inequality would change. The second inequality is true since <span class="math">\(na^2\geq 0\)</span>.</p>
+
+<p><strong>10.</strong></p>
+
+<p>(a)
+The following is not a complete proof or explanation. It is only the algebra part. Make sure you can identify where the induction hypothesis is used. Make sure you can justify both of the inequalities.</p>
+
+<p><span class="math">\[\begin{align*}
+\frac{1}{1^2}+\frac{1}{2^2}+\dots+\frac{1}{n^2}+\frac{1}{(n+1)^2}&amp;\leq 2-\frac{1}{n}+\frac{1}{(n+1)^2}\\
+&amp;=2-\left(\frac{1}{n}-\frac{1}{(n+1)^2}\right)\\
+&amp;=2-\left(\frac{(n+1)^2-n}{n(n+1)^2}\right)\\
+&amp;=2-\left(\frac{n^2+n+1}{n(n+1)^2}\right)\\
+&amp;=2-\left(\frac{n^2+n+1}{(n^2+n)(n+1)}\right)\\
+&amp;\leq 2-\left(\frac{n^2+n+1}{(n^2+n+1)(n+1)}\right)\\
+&amp;=2-\frac{1}{n+1}
+\end{align*}\]</span></p>
+
+<p>(b) Again, the following is only the algebra. It does not constitute a complete proof.</p>
+
+<p><span class="math">\[\begin{align*}
+2-\frac{n+2}{2^n}+\frac{n+1}{2^{n+1}}&amp;=2-\left(\frac{n+2}{2^n}-\frac{n+1}{2^{n+1}}\right)\\
+&amp;=2-\frac{(2n+4)-(n+1)}{2^{n+1}}\\
+&amp;= 2-\frac{n+3}{2^{n+1}}
+\end{align*}\]</span>
+<!-- 
+**11.** (save for exam)
+
+$$\begin{align*}
+\frac{(2n+2)!}{2^{n+1}(n+1)!}&=\frac{(2n)!(2n+1)(2n+2)}{2^n\cdot2\cdot n!\cdot (n+1)}\\
+&=\left(\frac{(2n)!}{2^nn!}\right)\left(\frac{(2n+1)(2n+2)}{2(n+1)}\right)\\
+&= \left(\frac{(2n)!}{2^nn!}\right)(2n+1)
+\end{align*}$$
+
+So, if $$\frac{(2n)!}{2^nn!}$$ is an integer, then so is $$\frac{(2n+2)!}{2^{n+1}(n+1)!}.$$
+
+If $n=1$ the expression equals $1$, an integer.
+
+--></p>
 </body>
 </html>
