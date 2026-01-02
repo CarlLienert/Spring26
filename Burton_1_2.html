@@ -7,10 +7,167 @@
 <body>
 <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<p>Burton Section 1.2</p>
+<h2>Burton Section 1.2</h2>
+<!--
+**1.**
 
-<p><strong>6.</strong></p>
 
-<p>This is a problem.</p>
+$$\begin{align*}
+\binom{n}{k} \binom{k}{r}&=\frac{n!}{k!(n-k)!}\cdot \frac{k!}{r!(k-r)!}\\
+&=\frac{n!}{r!}\cdot \frac{1}{(n-k)!}\cdot \frac{1}{(k-r)!}\\
+&= \frac{n!}{r!(n-r)!}\cdot \frac{1}{(n-k)!}\cdot \frac{(n-r)!}{(k-r)!}\\
+&= \frac{n!}{r!(n-r)!}\cdot \frac{1}{((n-r)-(k-r))!}\cdot \frac{(n-r)!}{(k-r)!}\\
+&=\binom{n}{r}\binom{n-r}{k-r}
+\end{align*}$$
+
+Let $r=1$ in the identity:
+
+$$\begin{align*}
+\binom{n}{k}\binom{k}{1}&=\binom{n}{1}\binom{n-1}{k-1}\\
+\binom{n}{k}&=\frac{n}{k}\cdot \frac{(n-1)!}{(k-1)!((n-1)-(k-1))!}\\
+&=\frac{n!}{k\cdot (k-1)!\cdot (n-k)!}\\
+&=\frac{n-k+1}{k}\cdot \frac{n!}{(k-1)!(n-k)!(n-k+1)}\\
+&= \frac{n-k+1}{k}\cdot \frac{n!}{(k-1)!((n-k+1)!)}\\
+&= \frac{n-k+1}{k}\cdot\binom{n}{k-1}
+\end{align*}$$
+
+-->
+
+<p><strong>3.</strong></p>
+<!--
+
+(a) If $a=b=1$ the binomial theorem is precisely the desired identity.
+
+-->
+
+<p>(b) Similar idea: let <span class="math">\(a=1\)</span> and <span class="math">\(b=-1\)</span> in the binomial theorem.</p>
+<!--
+
+(c) $$\begin{align*}
+(1+b)^{n}&=\binom{n}{0}1^{n}+\binom{n}{1}(1)^{n-1}b+\binom{n}{2}b^2+\binom{n}{3}b^3+\cdots+\binom{n}{n}b^n
+\end{align*}$$
+
+Differentiating with respect to $b$ gives:
+$$n(1+b)^{n-1}=\binom{n}{1}+2\binom{n}{2}b+3\binom{n}{3}b^2+\cdots+n\binom{n}{n}b^{n-1}$$
+
+Setting $b=1$ gives the desired result.
+
+-->
+
+<p>(d) Use the expansion of <span class="math">\((1+b)^n\)</span> with <span class="math">\(b=2\)</span>.</p>
+
+<p>(e) Follow the hint. Make sure to justify both equalities.</p>
+<!--
+
+(f) $$\begin{align*}
+(1-1)^{n+1}&=\binom{n+1}{0}+\binom{n+1}{1}(-1)^1+\binom{n+1}{2}+\cdots+\binom{n+1}{n+1}(-1)^{n+1}\\
+&= \binom{n+1}{0}-\binom{n+1}{1}+\binom{n+1}{2}+\cdots+(-1)^{n+1}\binom{n+1}{n+1}\\
+\end{align*}$$
+
+Each of the binomial terms is of the form
+$$\binom{n+1}{k}=\frac{(n+1)!}{k!(n+1-k)!}=\frac{n+1}{k}\cdot\frac{n!}{(k-1)!(n-k+1)!}=\frac{n+1}{k}\binom{n}{k-1}.$$
+
+Apply this to each term above on the right except the first:
+
+$$\begin{align*}
+0&=1-\frac{n+1}{1}\binom{n}{0}+\frac{n+1}{2}\binom{n}{1}-\frac{n+1}{3}\binom{n}{2}+\cdots + (-1)^{n+1}\frac{n+1}{n+1}\binom{n}{n}\\
+\frac{1}{n+1}&=\binom{n}{0}-\frac{1}{2}\binom{n}{1}+\frac{1}{3}\binom{n}{2}+\cdots+(-1)^n\frac{1}{n+1}\binom{n}{n}
+\end{align*}$$
+
+-->
+<!--
+
+**4.**
+
+$$\binom{n}{r}=\frac{n!}{r!(n-r)!}$$
+$$\binom{n}{r+1}=\frac{n!}{(r+1)!(n-r-1)!}$$
+
+So $$\begin{align*}
+\binom{n}{r}<\binom{n}{r+1} &\text{ \ \ iff \ \ } r!(n-r)!>(r+1)!(n-r-1)!\\
+&\text{ \ \ iff \ \ } n-r >r+1\\
+&\text{ \ \ iff \ \ } n-1 >2r\\
+&\text{ \ \ iff \ \ } \frac{1}{2}(n-1) > r
+\end{align*}.$$
+
+Of course, we need $r \geq 0$.
+
+The other parts are similar.
+
+-->
+<!--
+
+**6.**
+
+$$\begin{align*}
+\binom{2}{2}+\binom{4}{2}+ \cdots+\binom{2n}{2}&=\binom{2}{2}+2\binom{2}{2}+2^2+2\binom{3}{2}+3^2+\cdots +2\binom{n}{2}+n^2\\
+&=\binom{2}{2}+2\left(\binom{2}{2}+\binom{3}{2}+\cdots \binom{n}{2}\right)+2^2+3^3+\cdots+n^2\\
+&=2\binom{n+1}{3}+\frac{n(n+1)(2n+1)}{6}\\
+&=2\frac{(n+1)!}{3!(n-2)!}+ \frac{n(n+1)(2n+1)}{6}\\
+&=\frac{2(n+1)!+n(n+1)(2n+1)(n-2)!}{3!(n-2)!}\\
+&=\frac{(n-2)!(2(n+1)(n)(n-1)+n(n+1)(2n+1))}{3!(n-2)!}\\
+&=\frac{2(n+1)(n)(n-1)+n(n+1)(2n+1))}{6}\\
+&=\frac{n(n+1)(2(n-1)+(2n+1))}{6}\\
+&=\frac{n(n+1)(4n-1)}{6}
+\end{align*}$$
+
+Let’s prove the hint:
+
+$$\begin{align*}
+\binom{2m}{2}&=\frac{(2m)!}{2!(2m-2)!}\\
+&=\frac{(2m)(2m-1)}{2}\\
+&=2m^2-m\\
+&=m^2+m^2-m
+\end{align*}$$
+
+and since $$\begin{align*}
+2\binom{m}{2}&=2\frac{m!}{2!(m-2)!}\\
+&=m(m-1)\\
+&=m^2-m
+\end{align*}$$
+
+we're done.
+
+-->
+
+<p><strong>7.</strong></p>
+
+<p>Use induction:</p>
+
+<p><span class="math">\[\begin{align*}
+\binom{2n+1}{3}+(2n+1)^2&amp;=\frac{(2n+1)!}{3!(2n-2)!}+(2n+1)^2\\
+&amp;=\frac{(2n+1)(2n)(2n-1)}{3!}+(2n+1)^2\\
+&amp;=\frac{(2n+1)(2n)(2n-1)+6(2n+1)^2}{3!}\\
+&amp;=\frac{(2n+1)((2n)(2n-1)+6(2n+1))}{3!}\\
+&amp;=\frac{(2n+1)(4n^2+10n+6)}{3!}\\
+&amp;=\frac{(2n+1)(2(2n^2+5n+3))}{3!}\\
+&amp;=\frac{2(2n+1)(2n+3)(n+1)}{3!}\\
+&amp;=\frac{(2n+3)(2n+2)(2n+1)(2n)!}{3!(2n)!}\\
+&amp;=\frac{(2n+3)!}{3!(2n+3-3)!}
+\end{align*}\]</span></p>
+
+<p><strong>8.</strong></p>
+
+<p><span class="math">\[\begin{align*}
+\binom{2n}{n} &amp;= \frac{(2n)!}{n!n!}\\ \\
+&amp;=\frac{(2n)(2n-1)(2n-2)(2n-3)(2n-4)\cdots(5)(4)(3)(2)(1)}{[(n)(n-1)(n-2)\cdots(4)(3)(2)(1)][(n)(n-1)(n-2)\cdots(4)(3)(2)(1)]}\\ \\
+&amp;=\frac{2^n\cdot(n)(2n-1)(n-1)(2n-3)(n-2)\cdots(5)(2)(3)(1)(1)}{[(n)(n-1)(n-2)\cdots(4)(3)(2)(1)][(n)(n-1)(n-2)\cdots(4)(3)(2)(1)]}\\ \\
+&amp;= \frac{2^n\cdot(2n-1)(2n-3)\cdots(5)(3)(1)}{[(n)(n-1)(n-2)\cdots(4)(3)(2)(1)]}\\ \\
+&amp;= \frac{2^{2n}\cdot(2n-1)(2n-3)\cdots(5)(3)(1)}{2^n[(n)(n-1)(n-2)\cdots(4)(3)(2)(1)]}\\ \\
+&amp;= \frac{2^{2n}\cdot(2n-1)(2n-3)\cdots(5)(3)(1)}{(2n)(2n-2)(2n-4)\cdots(8)(6)(4)(2)}\\ \\
+\end{align*}\]</span></p>
+
+<p><strong>9.</strong></p>
+
+<p>Using #8, this is equivalent to:</p>
+
+<p><span class="math">\[\frac{1}{2^n}&lt; \frac{1\cdot3\cdot5\cdots(2n-1)}{2\cdot4\cdot6 \cdots (2n)} &lt; 1.\]</span></p>
+
+<p>Consider the fraction as:</p>
+
+<p><span class="math">\[\left(\frac{1}{2}\right)\left(\frac{3}{4}\right)\left(\frac{5}{6}\right)\cdots\left(\frac{2n-1}{2n}\right).\]</span></p>
+
+<p>Each of these fractions is less than one, so the product is less than one, which gives the righthand inequality.</p>
+
+<p>With the exception of <span class="math">\(\frac{1}{2}\)</span>, each of these fractions is greater than <span class="math">\(\frac{1}{2}\)</span>. There are <span class="math">\(n\)</span> factors so the product is greater than <span class="math">\(\frac{1}{2^n}\)</span>.</p>
 </body>
 </html>
