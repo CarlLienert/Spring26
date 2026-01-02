@@ -1,0 +1,173 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Burton_2_1</title>
+</head>
+<body>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<h2>Burton Section 2.1</h2>
+
+<p><strong>1.</strong></p>
+<!--
+
+(a)
+
+The $n^\text{th}$ triangular number is of the form 
+$$1+2+3+\cdots n.$$
+
+You can prove this equals $\frac{n(n+1)}{2}$ using induction.
+
+
+(b)
+
+$$\begin{align*}
+8\cdot \frac{m(m+1)}{2}+1&=4m^2+4m+1=(2m+1)^2
+\end{align*}$$
+
+-->
+
+<p>(c)</p>
+
+<p><span class="math">\[\begin{align*}
+\frac{n(n+1)}{2}+\frac{(n+1)(n+2)}{2}&amp;=\frac{(n+1)(2n+2)}{2}\\ \\
+&amp;=(n+1)^2
+\end{align*}\]</span></p>
+<!--
+
+(d)
+
+$$\begin{align*}
+9\cdot \frac{m(m+1)}{2}+1&=\frac{9m(m+1)+2}{2}\\
+&=\frac{9m^2+9m+2}{2}\\
+&=\frac{(3m+1)(3m+2)}{2}\\
+&=\frac{k(k+1)}{2}
+\end{align*}$$
+
+where $k=3m+1$. So, if $n=\frac{m(m+1)}{2}$ is the $m^\text{th}$ triangular number, then $9n+1$ is the $(3m+1)^\text{st}$ triangular number.
+
+-->
+<!--
+
+**2.**
+
+$$\binom{n+1}{2}=\frac{(n+1)!}{2!\cdot (n-1)!}=\frac{(n+1)(n)}{2}$$
+
+-->
+
+<p><strong>3.</strong></p>
+
+<p>The hint follows from question 1a).</p>
+
+<p>If <span class="math">\(n\)</span> is even, let <span class="math">\(n=2m\)</span>:</p>
+
+<p><span class="math">\[\begin{align*}
+t_1+t_2+\dots+t_n&amp;= (t_1+t_2)+(t_3+t_4)+\dots+(t_{n-1}+t_n)\\ \\
+&amp;=2^2+4^2+\dots+(2m)^2\\ \\
+&amp;=2^2(1+2^2+3^2+\dots+m^2)\\ \\
+&amp;=2^2\cdot \left(\frac{m(2m+1)(m+1)}{6}\right)\\ \\
+&amp;=\frac{2m(2m+1)(2m+2)}{6}\\ \\
+&amp;=\frac{n(n+1)(n+2)}{6}
+\end{align*}\]</span></p>
+
+<p>where we have used the result from section 1.1 concerning the sum of the first <span class="math">\(n\)</span> squares. </p>
+
+<p>If <span class="math">\(n\)</span> is odd:</p>
+
+<p><span class="math">\[\begin{align*}
+t_1+t_2+\dots+t_n&amp;= (t_1+t_2)+(t_3+t_4)+\dots+(t_{n-2}+t_{n-1})+t_n\\ \\
+&amp;=\frac{(n-1)(n)(n+1)}{6}+\frac{n(n+1)}{2}\\ \\
+&amp;=\frac{(n-1)(n)(n+1)+3n(n+1)}{6}\\ \\
+&amp;=\frac{(n+1)(n^2-n+3n)}{6}\\ \\
+&amp;=\frac{(n+1)(n)(n+2)}{6}
+\end{align*}\]</span></p>
+<!--
+
+**5.**
+
+
+(a) We want:
+
+$$\frac{n(n+1)}{2}+\frac{m(m+1)}{2}=\frac{k(k+1)}{2}$$ and
+
+$$\frac{n(n+1)}{2}-\frac{m(m+1)}{2}=\frac{l(l+1)}{2}$$
+
+This system is equivalent to 
+
+$2n(n+1)=k(k+1)+l(l+1$)
+
+-->
+<!--
+**6.**
+
+$$\begin{align*}
+\frac{4n(n+1)(4n(n+1)+1)}{2}&=\frac{(4n^2+4n)(4n^2+4n+1)}{2}\\
+&=\frac{4n(n+1)(2n+1)^2}{2}\\
+&=\frac{n(n+1)}{2}\cdot \left(2(2n+1)\right)^2
+\end{align*}$$
+
+The first triangular number that is also a square is 1. Use this to find another: $$t_{4(1)((1)+1)}=t_8=\frac{8(9)}{2}=36.$$ And use $t_8$ to find another example:
+
+$$t_{4(8)(8+1)}=t_{288}=\frac{288\cdot289}{2}=41616=204^2$$
+
+-->
+
+<p><strong>7.</strong></p>
+
+<p><span class="math">\[\begin{align*}
+t_n^2-t_{n-1}^2&amp;=\frac{n^2(n+1)^2}{4}-\frac{(n-1)^2(n)^2}{4}\\ \\
+&amp;=\frac{n^2(4n)}{4}\\ \\
+&amp;=n^3
+\end{align*}\]</span></p>
+<!--
+
+**8.**
+
+$$\begin{align*}
+\frac{1}{1}+\frac{1}{3}+\dots+\frac{1}{t_n}&=\frac{2}{1(1+1)}+\frac{2}{2(2+1)}+\dots+\frac{2}{n(n+1)}\\
+&=2\cdot\left(\frac{1}{1}-\frac{1}{2}+\frac{1}{2}-\frac{1}{3}+\frac{1}{3}-\frac{1}{4}+\dots+\frac{1}{n}-\frac{1}{n-1}\right)\\
+&=2\cdot\left(1-\frac{1}{n+1}\right)<2
+\end{align*}$$
+
+since $1-\frac{1}{n+1}<1$.
+
+-->
+
+<p><strong>10.</strong></p>
+
+<p>Use induction. The key algebraic step is:</p>
+
+<p><span class="math">\[\begin{align*}
+\frac{(n-1)(3(n-1)-1)}{2}+(3n-2)&amp;=\frac{(n-1)(3n-4)}{2}+(3n-2)\\ \\
+&amp;=\frac{(n-1)(3n-4)+2(3n-2)}{2}\\ \\
+&amp;=\frac{3n^2-n}{2}\\ \\
+&amp;=\frac{n(3n-1)}{2}
+\end{align*}\]</span> </p>
+
+<p><strong>11.</strong></p>
+<!--
+(a)
+
+$$\begin{align*}
+\frac{(n-1)(n)}{2}+n^2&=\frac{3n^2-n}{2}=\frac{n(3n-1)}{2}
+\end{align*}$$
+
+-->
+
+<p>(b) </p>
+
+<p><span class="math">\[\begin{align*}
+3t_{n-1}+n&amp;=3\frac{(n-1)(n)}{2}+n\\ \\
+&amp;=\frac{3n^2-3n+2n}{2}\\ \\
+&amp;=\frac{3n(n-1)}{2}=p_n
+\end{align*}\]</span></p>
+
+<p><span class="math">\[\begin{align*}
+2t_{n-1}+t_n&amp;=2\frac{(n-1)(n)}{2}+\frac{n(n+1)}{2}\\ \\
+&amp;=\frac{2n^2-2n+n^2+n}{2}\\ \\
+&amp;=\frac{3n^2-n}{2}\\ \\
+&amp;=\frac{3n(n-1)}{2}=p_n
+\end{align*}\]</span></p>
+</body>
+</html>
